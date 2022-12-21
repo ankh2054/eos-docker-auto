@@ -22,6 +22,11 @@ RUN curl -o /eosio.cdt/eosio.cdt_1.6.3-1-ubuntu-18.04_amd64.deb --create-dirs -L
 RUN curl -o /eosio.cdt/eosio.cdt_1.7.0-1-ubuntu-18.04_amd64.deb --create-dirs -L https://github.com/EOSIO/eosio.cdt/releases/download/v1.7.0/eosio.cdt_1.7.0-1-ubuntu-18.04_amd64.deb \
     && dpkg-deb -x /eosio.cdt/eosio.cdt_1.7.0-1-ubuntu-18.04_amd64.deb /eosio.cdt/v1.7.0
 
+# Download and unpackage EOSIO.CDT 1.8.1
+RUN curl -o /eosio.cdt/eosio.cdt_1.8.1-1-ubuntu-18.04_amd64.deb --create-dirs -L https://github.com/EOSIO/eosio.cdt/releases/download/v1.8.1/eosio.cdt_1.8.1-1-ubuntu-18.04_amd64.deb \
+    && dpkg-deb -x /eosio.cdt/eosio.cdt_1.8.1-1-ubuntu-18.04_amd64.deb /eosio.cdt/v1.8.1
+
+
 # Download EOSIO.Contracts
 RUN curl -LO https://github.com/EOSIO/eosio.contracts/archive/v1.8.3.tar.gz && tar -xzvf v1.8.3.tar.gz --one-top-level=eosio.contracts --strip-components 1
 
